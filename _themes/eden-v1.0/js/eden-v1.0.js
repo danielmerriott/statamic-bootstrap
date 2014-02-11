@@ -104,21 +104,22 @@ $(document).ready(function() {
   var permitcookiePartialName = '_modalcookies';
   var permitcookieName = '_permitcookies';
   var permitcookieExpiryDays = 7;
-  var dt = new Date();
-  var permitcookieDataString = vernamcypher($(location).attr('hostname'), hexit('t=' + dt.valueOf() + '; l=' + $(location).attr('href')) );
+  var permitcookieDataString = vernamcypher($(location).attr('hostname'), 
+                               hexit('t=' + (new Date).valueOf() + ';' +
+                                     'e=' + (new Date).setDate((new Date).getDate()+permitcookieExpiryDays).valueOf() + ';' +
+                                     'l=' + $(location).attr('href')) );
   var crumbs = new Array();
   var crumbdata = $.cookie(permitcookieName);
   if (!crumbdata) {
-    $('body').append('<div id="cookiealert"></div>');
-    var scriptpath = $("script[src]").last().attr("src").split('?')[0].split('/').slice(0, -1).join('/')+'/';
-    $('#cookiealert').load(scriptpath+'../partials/'+permitcookiePartialName+'.html', function( response, status, xhr ) {
-        if ( status == "error" ) {
-          var msg = "Sorry but there was an error: ";
-          $( "#cookieinsert" ).html( msg + xhr.status + " " + xhr.statusText );
-        } else {
-          showAlertFixedTop()
-        }
-    });
+    $('body').append(
+      '<div class="alert alert-info alert-dismissable alert-fixed-top fade" id="' + $.now() + permitcookieName + '">' +
+      '  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+      '  <span class="fa fa-fw fa-lg fa-info-circle"></span>&nbsp;' +
+      '  This website makes use of cookies to enhance your browsing experience and provide additional functionality.' +
+      '  Please see the <a href="/privacy" class="alert-link">privacy policy</a> for more details.' +
+      '</div>'
+      );
+    showAlertFixedTop()
     $.cookie(permitcookieName, permitcookieDataString, { expires: permitcookieExpiryDays, path: '/' });
   } else {
     crumbdata = unhexit(vernamcypher($(location).attr('hostname'),crumbdata));
@@ -129,7 +130,11 @@ $(document).ready(function() {
       crumbs[ splitcookie[i].split('=')[0] ] = splitcookie[i].split('=')[1]
     }
     var d = new Date(Number(crumbs['t']));
-    //alert('found cookie!\ntimestamp: ' + d + '\nlocation: ' + crumbs['l'] + '\n\ncrumbdata: ' + crumbdata);
+    var e = new Date(Number(crumbs['e']));
+    console.log('found cookie!\n' + 
+                'timestamp: ' + d + '\n' +
+                'expires: ' + e + '\n' +
+                'location: ' + crumbs['l']);
   }
   
   function vernamcypher(key, value) {
