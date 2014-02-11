@@ -1,0 +1,36 @@
+<div class="container page-footer-container">
+  <footer class="page-footer" role="contentinfo" id="pagefoot">
+  <div class="row clearfix">
+    <div class="col-xs-12">
+      <div class="nav navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/about/copyright" title="Copyright information"><span class="match-fa-fw">&copy;</span>&nbsp;2013-{{ current_date format="Y" }} {{ _site_name }}</a>
+          </li>
+          <li>
+            <a href="/about/privacy" title="Privacy information"><span class="fa fa-fw fa-flag fa-flip-horizontal"></span>&nbsp;Privacy Policy</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{ if logged_in }}
+          <li class="hidden-xs">
+            <a href="#" title="Site information"><span class="fa fa-info-circle fa-lg"></span></a>
+          </li>
+          {{ else }}
+          <li class="hidden-xs">
+            <a data-toggle="modal" href="#login" title="Log in (authorised users only)"><span class="fa fa-user fa-fw"></span></a>
+          </li>
+          {{ endif }}
+          <li class="hidden-xs">
+            <a href="http://statamic.com" title="Powered by Statamic" target="_blank" rel="nofollow"><span class="statamic-icon"></span></a>
+          </li>
+          <li>
+            <a href="#top" title="Return to top of page"><span class="visible-xs"><span class="fa fa-fw fa-chevron-circle-up"></span>&nbsp;Return to top</span><span class="hidden-xs fa fa-2x fa-chevron-circle-up pull-right"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </footer>
+</div>
+{{ theme:partial src="_modallogin" }}

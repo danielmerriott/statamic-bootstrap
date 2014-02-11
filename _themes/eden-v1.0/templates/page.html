@@ -1,0 +1,12 @@
+<section role="main">
+<div class="row clearfix">
+  <div class="col-sm-8 col-md-9">
+    {{ if alt_title }}
+    <h2>{{ alt_title }}</h2>
+    {{ else }}
+    <h2>{{ title }}</h2>
+    {{ endif }}
+    {{ content }}
+  </div>
+</div>
+</section><!-- END role="main" -->

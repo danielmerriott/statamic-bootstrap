@@ -1,0 +1,66 @@
+<article class="article article-single">
+  <header>
+    {{ if alt_title }}
+    <h2 class="article__heading">{{ alt_title }}</h2>
+    {{ else }}
+    <h2 class="article__heading">{{ title }}</h2>
+    {{ endif }}
+    
+    {{ if author || date || categories_list || tags_list }}
+    <div class="article__meta">
+
+      {{ if author|not_empty }}
+      {{ member:profile member="{author}" }}
+      <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p>
+      {{ /member:profile }}
+      {{ endif }}
+
+      {{ if date }}
+      <p class="article__date">Posted on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
+      {{ endif }}
+      
+      {{ if categories_list && tags_list }}
+      <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
+      {{ endif }}
+
+      {{ if categories_list && !tags_list }}
+      <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
+      {{ endif }}
+
+      {{ if !categories_list && tags_list }}
+      <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
+      {{ endif }}
+
+    </div><!-- END .article__meta -->
+    {{ endif }}
+  </header>
+
+  {{ if main_img|not_empty }}
+  <img src="{{ transform
+    src="{{ main_img }}"
+    width="650"
+    height="450"
+    action="smart"
+  }}" alt="" class="article__img">
+  {{ endif }}
+
+  <div class="lead">
+  {{ summary|smartypants|markdown }}
+  </div><!-- END .lead -->
+
+  <div class="main-content">
+  {{ content }}
+  </div><!-- END .main-content -->
+  
+  <footer>
+    <a href="/">&larr; back</a>
+  </footer>
+</article>
+
+{{ if show_comments }}
+<div class="comments">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{disqus_account}" }}
+</div>
+{{ endif }}
+

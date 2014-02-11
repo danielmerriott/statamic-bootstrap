@@ -1,0 +1,18 @@
+hide: true
+
+fields:
+  jumbotron_section:
+    type: section
+    display: Jumbotron Section
+    instructions:
+      below: "Use these fields to configure the jumbotron on the front page."
+  jumbotron_image_src:
+    display: Jumbotron Background Image
+    type: text
+    instructions:
+      below: "Enter the URL to the background image for the jumbotron. If not set, no image will be used."
+  jumbotron_link_dst:
+    display: Jumbotron Link Destination
+    type: text
+    instructions:
+      below: "Enter the URL that the jumbotron button will link to."

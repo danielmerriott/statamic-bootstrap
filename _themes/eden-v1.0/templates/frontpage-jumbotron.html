@@ -1,0 +1,37 @@
+<section role="main">
+<div class="row clearfix">
+  <div class="col-md-12">
+    {{ if alt_title }}
+    <h2>{{ alt_title }}</h2>
+    {{ else }}
+    <h2>{{ title }}</h2>
+    {{ endif }}
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      {{ content }}
+      <p><a class="btn btn-primary btn-lg" href="{{ jumbotron_link_dst }}">Learn more &raquo;</a></p>
+    </div>
+</section><!-- END role="main" -->
+
+{{ if segment_1 == "" }}
+<section class="articles">
+<div class="row clearfix">
+  <div class="col-sm-12">
+    <div class="row clearfix">
+      {{ entries:listing folder="blog" limit="3" sort_by="random" }}
+      {{# later add in: conditions="featured:yes" #}}
+      <div class="col-sm-4">
+        <h2>{{ title }}</h2>
+        {{ if main_img|not_empty }}
+        <img src="{{ transform src="{{ main_img }}" width="180" height="120" action="smart" }}" alt="" class=" article__img">
+        {{ endif }}
+        <p>{{ summary|smartypants|markdown }}</p>
+        <p><a class="btn" href="{{ url }}">Read more &raquo;</a></p>
+      </div>
+      {{ /entries:listing }}
+    </div>
+  </div>
+</div>
+</section>
+{{ endif }}

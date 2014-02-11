@@ -1,0 +1,63 @@
+{{ entries:listing
+   folder="{fold}"
+   limit="{lim}"
+   taxonomy="{tax}"
+}}
+  {{ if no_results }}
+  <p>Sorry there are no entries to display at this time.</p>
+  {{ else }}
+
+    {{ if first }}
+    <ul class="media-list">
+    {{ endif }}
+      <li class="media">
+        {{ if main_img|not_empty }}
+        <a class="pull-left" href="{{ url }}">
+          <img class="media-object" src="{{ transform src="{ main_img }" width="96" height="96" action="smart" }}" alt="...">
+        </a>
+        {{ else }}
+        <a class="pull-left">
+          <img class="media-object" src="/assets/img/empty.gif" width="96" height="96" alt="empty">
+        </a>
+        {{ endif }}
+        <div class="media-body">
+          <article class="article">
+            <h3 class="media-heading"><a href="{{ url }}">{{ title }}</a></h3>          
+            {{ if author || date || categories_list }}
+            <div class="media-metadata text-muted">
+            <p>Posted 
+              {{ if author|not_empty }}
+              {{ member:profile member="{author}" }}
+              by <span class="article__author">
+              {{ if author_url }}<a href="{{ author_url }}">{{ endif }}
+              {{ first_name }} {{ last_name }}
+              {{ if author_url }}</a>{{ endif }}
+              </span>
+              {{# if gravatar #}}
+              <span>{{ get_gravatar }}</span>
+              {{# endif #}}
+              {{ /member:profile }}
+              {{ endif }}
+              {{ if date }}
+              on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+              {{ endif }}
+              {{ if categories_list }}
+              in <span class="article__category">{{ categories_url_list|title }}</span>
+              {{ endif }}
+            </p>
+            </div><!-- END .article__meta -->
+            {{ endif }}
+            <div class="media-summary">
+              {{ summary|smartypants|markdown }}
+            </div>
+          </article>
+        </div><!-- END .media-body -->
+      </li>
+    {{ if last }}
+    </ul>
+    {{ endif }}
+
+  {{ endif }}
+{{ /entries:listing }}
+
+{{ theme:partial src="_pagination" fold="{fold}" lim="{lim}" tax="{tax}" }} 

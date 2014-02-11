@@ -1,0 +1,12 @@
+hide: true
+
+fields:
+  notes:
+    type: section
+    display: Notes
+    instructions: "This page automatically creates a sitemap which is used by Google. You do not need to change anything here."
+
+  content:
+    type: hidden
+
+# This is the sitemap fieldset

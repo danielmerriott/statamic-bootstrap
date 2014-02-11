@@ -1,0 +1,57 @@
+WARN|Fri, 07 Feb 2014 15:33:18 +1300|tasks|bloodhound|/search?query=template|172.16.73.1|dev|Someone searched for *template* and no results were found.
+INFO|Fri, 07 Feb 2014 15:33:32 +1300|tasks|bloodhound|/search?query=statamic|172.16.73.1|dev|Someone searched for *statamic* and found 7 results.
+INFO|Fri, 07 Feb 2014 15:34:11 +1300|tasks|bloodhound|/search?query=for|172.16.73.1|dev|Someone searched for *for* and found 8 results.
+INFO|Fri, 07 Feb 2014 15:34:15 +1300|tasks|bloodhound|/search?query=and|172.16.73.1|dev|Someone searched for *and* and found 7 results.
+WARN|Fri, 07 Feb 2014 15:34:19 +1300|tasks|bloodhound|/search?query=home|172.16.73.1|dev|Someone searched for *home* and no results were found.
+INFO|Fri, 07 Feb 2014 15:34:24 +1300|tasks|bloodhound|/search?query=cake|172.16.73.1|dev|Someone searched for *cake* and found 5 results.
+WARN|Fri, 07 Feb 2014 16:45:58 +1300|tasks|bloodhound|/search?query=something|172.16.73.1|dev|Someone searched for *something* and no results were found.
+WARN|Fri, 07 Feb 2014 16:46:18 +1300|tasks|bloodhound|/search?query=anything|172.16.73.1|dev|Someone searched for *anything* and no results were found.
+INFO|Fri, 07 Feb 2014 16:46:20 +1300|tasks|bloodhound|/search?query=daniel|172.16.73.1|dev|Someone searched for *daniel* and found 9 results.
+FATAL|Fri, 07 Feb 2014 16:55:15 +1300|Lex|Parser|/search?query=daniel|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: {{ get:query }}
+<div>Search results for "{{ get:query|sanitize }}"</div>
+else: 
+<div>Use the search form in the navbar to search for something</div>
+endif; 
+
+callback_blocks_735c1958c8805c4b05bda78986ff331d
+
+callback_blocks_3e7a124778fa80cbdebc2c260e8998e2
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: {{ get:query }}
+<div>Search results for "{{ get:query|sanitize }}"</div>
+else: 
+<div>Use the search form in the navbar to search for something</div>
+endif; 
+
+callback_blocks_735c1958c8805c4b05bda78986ff331d
+
+callback_blocks_3e7a124778fa80cbdebc2c260e8998e2
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('{{ get:query }}...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('{{ get:query }}...', Array, 'Statamic_View::...')
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ get:query }}...', Array, 'Statamic_View::...', false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ get:query }}...', Array, 'Statamic_View::...')
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#5 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#13 [internal function]: {closure}(Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#21 {main}
+INFO|Fri, 07 Feb 2014 17:04:20 +1300|tasks|bloodhound|/search?query=a|172.16.73.1|dev|Someone searched for *a* and found 1 result.
+INFO|Fri, 07 Feb 2014 17:04:26 +1300|tasks|bloodhound|/search?query=ab|172.16.73.1|dev|Someone searched for *ab* and found 6 results.
+WARN|Fri, 07 Feb 2014 18:25:37 +1300|tasks|bloodhound|/search?query=ddddd|172.16.73.1|dev|Someone searched for *ddddd* and no results were found.
+WARN|Fri, 07 Feb 2014 18:25:45 +1300|tasks|bloodhound|/search?query=ddd|172.16.73.1|dev|Someone searched for *ddd* and no results were found.
+INFO|Fri, 07 Feb 2014 18:25:49 +1300|tasks|bloodhound|/search?query=dd|172.16.73.1|dev|Someone searched for *dd* and found 6 results.

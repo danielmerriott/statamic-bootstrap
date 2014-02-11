@@ -1,0 +1,46 @@
+{{ entries:pagination
+  folder="{fold}"
+  limit="{lim}"
+  taxonomy="{tax}"
+}}
+
+  {{# capture invalid ?page= URLs and redirect safely elsewhere #}}
+  {{ if get:page|numeric }}
+    {{ if get:page > total_pages }}
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    {{ endif }}
+    {{ if get:page < 2 }}
+      {{ redirect url="{ url }" }}
+    {{ endif }}
+  {{ else }}
+    {{ if get:page }}
+      {{ redirect url="{ url }" }}
+    {{ endif }}
+  {{ endif }}
+
+  {{ if total_pages > 1 }}
+  <div class="text-center">
+    <ul class="pagination pagination-sm">
+    {{ if previous_page }}
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    {{ else }}
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    {{ endif }}
+
+    {{# uses the pi.listpages.php add-on #}}
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    {{ if next_page }}
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    {{ else }}
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    {{ endif }}
+    </ul>
+  </div><!-- END .pagination -->
+  {{ endif }}
+
+{{ /entries:pagination }}

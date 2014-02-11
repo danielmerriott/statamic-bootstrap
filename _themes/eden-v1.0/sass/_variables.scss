@@ -1,0 +1,29 @@
+// ===============================================
+// All variables to be used in your theme go here. 
+// ===============================================
+
+// ===================
+// COLOURS
+// ===================
+
+// greyscale
+
+$black: rgb(0, 0, 0);
+$darkGrey: lighten($black, 25%);
+$grey: lighten($black, 50%);
+$lightGrey: lighten($black, 75%);
+$lighterGrey: lighten($black, 90%);
+$white: rgb(255, 255, 255);
+
+// site colours
+
+$mainColor: rgb(45, 53, 56);
+$compColor: rgb(88, 236, 118);
+
+// links
+
+$normal: $black;
+$hover: $compColor;
+$active: $compColor;
+$visited: $black;
+$focus: $compColor;

@@ -1,0 +1,25 @@
+<div class="row clearfix">
+  <div class="col-sm-8 col-md-9">
+  <section role="main">
+    {{ if segment_2 == "categories" }}
+    <h2>Category &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
+    {{ endif }}
+    {{ if segment_2 == "tags" }}
+    <h2>Tag &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
+    {{ endif }}
+    {{ if segment_2 == "author" }}
+    {{ member:profile member="{ taxonomy_slug|deslugify }" }}
+    <h2>Author &ndash; {{ first_name }} {{ last_name }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
+    {{ /member:profile }}
+    {{ endif }}
+  </section><!-- END role="main" -->
+  <section class="articles">
+    {{ theme:partial src="_article_listing" fold="{blog_name}" lim="5" tax="yes" listtype="taxonomy" }}
+  </section>
+  </div>
+
+  <div class="col-sm-4 col-md-3">
+    {{ theme:partial src="_sidebar" }}
+  </div>
+</div>
+

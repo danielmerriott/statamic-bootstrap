@@ -1,0 +1,82 @@
+{{ bloodhound:search dataset="sample" }}
+  {{ if not_enough_characters }}
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>A longer search term is required. Please type a couple more characters in the search form above.</div>
+  {{ elseif no_results }}
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>No results found. Please try another search term.</div>
+  {{ elseif no_query }}
+    <div>Looks like you haven't yet searched for something. Use the search form in the navbar above to search for something.</div>
+  {{ else }}
+    {{ if first }}
+    <div>Search results for '<strong>{{ _query }}</strong>' -  {{ total_results }} results found{{ if is_admin}} (in {{ _query_time|*:1000|round }} ms){{ endif }}:</div>
+      <ul class="media-list">
+    {{ endif }}
+        <li class="media">
+          <div class="media-body">
+            <article class="article">
+              <h4 class="media-heading">
+                <a href="{{ url }}">{{ title }}</a>
+                {{ if is_admin }}&nbsp;<span class="badge">{{ _score }}</span>&nbsp;{{ endif }}
+                <small>
+                {{ if author && date }}
+                  post
+                {{ elseif _template=="search" }}
+                  page
+                {{ else }}
+                  {{ _template }}
+                {{ endif }}
+                - {{ url|truncate:50 }}
+                </small>
+              </h4>
+              {{ if author || date || categories_list }}
+              <div class="media-metadata text-muted">
+                <p>Posted
+                  {{ if author|not_empty }}
+                  {{ member:profile member="{author}" }}
+                  by <span class="article__author">
+                  {{ if author_url }}<a href="{{ author_url }}">{{ endif }}
+                  {{ first_name }} {{ last_name }}
+                  {{ if author_url }}</a>{{ endif }}
+                  </span>
+                  {{ /member:profile }}
+                  {{ endif }}
+                  {{ if date }}
+                  on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+                  {{ endif }}
+                  {{ if categories_list }}
+                  in <span class="article__category">{{ categories_list|title }}</span>
+                  {{ endif }}
+                </p>
+              </div><!-- END .article__meta -->
+              {{ endif }}
+              <div class="media-summary">
+                {{ if summary }}
+                {{ summary|smartypants|markdown|striptags }}
+                {{ else }}
+                {{ content|striptags|smartypants|markdown|striptags|truncate:200 }}
+                {{ endif }}
+              </div>
+            </article>
+          </div>
+        </li>
+    {{ if last }}
+      </ul>
+    {{ endif }}
+  {{ endif }}
+{{ /bloodhound:search }}
+
+{{ bloodhound:pagination dataset="sample" }}
+  {{ if pagination && !no_results && !no_query && total_pages > 1 }}
+    <hr>
+      This is page {{ current_page }} of {{ total_pages }}.
+    <p>
+      {{ if next_page }}
+        <a href="{{ next_page }}">Next Page</a>
+      {{ endif }}
+      {{ if previous_page }}
+        <a href="{{ previous_page }}">Previous Page</a>
+      {{ endif }}
+    </p>
+  {{ endif }}
+{{ /bloodhound:pagination }}

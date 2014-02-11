@@ -1,0 +1,118 @@
+INFO|Sat, 08 Feb 2014 00:32:20 +1300|tasks|bloodhound|/search?query=dd|172.16.73.1|dev|Someone searched for *dd* and found 6 results.
+WARN|Sat, 08 Feb 2014 01:21:04 +1300|tasks|bloodhound|/search?query=aa|172.16.73.1|dev|Someone searched for *aa* and no results were found.
+INFO|Sat, 08 Feb 2014 01:26:19 +1300|tasks|bloodhound|/search?query=ad|172.16.73.1|dev|Someone searched for *ad* and found 7 results.
+WARN|Sat, 08 Feb 2014 01:29:30 +1300|tasks|bloodhound|/search?query=aad|172.16.73.1|dev|Someone searched for *aad* and no results were found.
+WARN|Sat, 08 Feb 2014 01:29:36 +1300|tasks|bloodhound|/search?query=qq|172.16.73.1|dev|Someone searched for *qq* and no results were found.
+WARN|Sat, 08 Feb 2014 01:30:59 +1300|tasks|bloodhound|/search?query=qaa|172.16.73.1|dev|Someone searched for *qaa* and no results were found.
+WARN|Sat, 08 Feb 2014 01:31:06 +1300|tasks|bloodhound|/search?query=qaaq|172.16.73.1|dev|Someone searched for *qaaq* and no results were found.
+WARN|Sat, 08 Feb 2014 01:32:05 +1300|tasks|bloodhound|/search?query=dwdwd|172.16.73.1|dev|Someone searched for *dwdwd* and no results were found.
+WARN|Sat, 08 Feb 2014 01:32:32 +1300|tasks|bloodhound|/search?query=aaqqqq|172.16.73.1|dev|Someone searched for *aaqqqq* and no results were found.
+WARN|Sat, 08 Feb 2014 01:32:39 +1300|tasks|bloodhound|/search?query=aaqq|172.16.73.1|dev|Someone searched for *aaqq* and no results were found.
+WARN|Sat, 08 Feb 2014 01:35:13 +1300|tasks|bloodhound|/search?query=aaa|172.16.73.1|dev|Someone searched for *aaa* and no results were found.
+INFO|Sat, 08 Feb 2014 01:39:20 +1300|tasks|bloodhound|/search?query=aaa|172.16.73.1|dev|Someone searched for *aaa* and found 1 result.
+INFO|Sat, 08 Feb 2014 01:49:34 +1300|tasks|bloodhound|/search?query=play|172.16.73.1|dev|Someone searched for *play* and found 7 results.
+INFO|Sat, 08 Feb 2014 09:20:54 +1300|tasks|bloodhound|/search?query=play|172.16.73.1|dev|Someone searched for *play* and found 7 results.
+WARN|Sat, 08 Feb 2014 09:25:56 +1300|tasks|bloodhound|/search?query=the%3Cdiv%3Eshowme%3C%2Fdiv%3Eworld|172.16.73.1|dev|Someone searched for *the&lt;div&gt;showme&lt;/div&gt;world* and no results were found.
+WARN|Sat, 08 Feb 2014 09:26:30 +1300|tasks|bloodhound|/search?query=the%3E%3Cdiv%3Eshowme%3C%2Fdiv%3E%3Cworld|172.16.73.1|dev|Someone searched for *the&gt;&lt;div&gt;showme&lt;/div&gt;&lt;world* and no results were found.
+WARN|Sat, 08 Feb 2014 14:38:25 +1300|tasks|bloodhound|/search?query=aaa|172.16.73.1|dev|Someone searched for *aaa* and no results were found.
+WARN|Sat, 08 Feb 2014 14:38:36 +1300|tasks|bloodhound|/search?query=ddd|172.16.73.1|dev|Someone searched for *ddd* and no results were found.
+INFO|Sat, 08 Feb 2014 14:38:40 +1300|tasks|bloodhound|/search?query=daniel|172.16.73.1|dev|Someone searched for *daniel* and found 9 results.
+WARN|Sat, 08 Feb 2014 15:58:41 +1300|tasks|bloodhound|/search?query=danielaa|172.16.73.1|dev|Someone searched for *danielaa* and no results were found.
+WARN|Sat, 08 Feb 2014 15:58:46 +1300|tasks|bloodhound|/search?query=aa|172.16.73.1|dev|Someone searched for *aa* and no results were found.
+INFO|Sat, 08 Feb 2014 15:58:54 +1300|tasks|bloodhound|/search?query=da|172.16.73.1|dev|Someone searched for *da* and found 9 results.
+FATAL|Sat, 08 Feb 2014 16:09:39 +1300|Lex|Parser|/search?query=da|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>Please type a couple more characters.</div>
+  elseif (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>No results found. Please try another search term.</div>
+  elseif (null): 
+    <div>Looks like you haven't yet searched for something. Use the search form in the navbar to search for something.</div>
+  else: 
+    if (true): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>  
+    <div>{{ total_results }} results found:</div>
+      <ul class="list-unstyled">
+    endif; 
+        <li>
+          <h4>
+            <a href="{{ url }}">{{ title }}</a>
+            {{ is_admin }}
+            <span class="badge">{{score}}</span>
+            endif;  
+          </h4>
+        </li>
+    if (false): 
+      </ul>
+    endif; 
+  endif; 
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>Please type a couple more characters.</div>
+  elseif (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>No results found. Please try another search term.</div>
+  elseif (null): 
+    <div>Looks like you haven't yet searched for something. Use the search form in the navbar to search for something.</div>
+  else: 
+    if (true): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>  
+    <div>{{ total_results }} results found:</div>
+      <ul class="list-unstyled">
+    endif; 
+        <li>
+          <h4>
+            <a href="{{ url }}">{{ title }}</a>
+            {{ is_admin }}
+            <span class="badge">{{score}}</span>
+            endif;  
+          </h4>
+        </li>
+    if (false): 
+      </ul>
+    endif; 
+  endif; 
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('?  <?php if (nu...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('?  {{ if not_en...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('?  {{ if not_en...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(71): Parse::template('?  {{ if not_en...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/pi.bloodhound.php(56): Parse::tagLoop('?  {{ if not_en...', Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_bloodhound->search()
+#6 [internal function]: Statamic_View::callback('bloodhound:sear...', Array, '?  {{ if not_en...')
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ bloodhound:s...', Array, 'Statamic_View::...', false)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#12 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#20 [internal function]: {closure}(Array)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#28 {main}
+INFO|Sat, 08 Feb 2014 16:17:59 +1300|tasks|bloodhound|/search?query=a|172.16.73.1|dev|Someone searched for *a* and found 1 result.
+INFO|Sat, 08 Feb 2014 16:21:51 +1300|tasks|bloodhound|/search?query=blah+song+tit|172.16.73.1|dev|Someone searched for *blah song tit* and found 8 results.
+INFO|Sat, 08 Feb 2014 16:21:59 +1300|tasks|bloodhound|/search?query=blah+song+tit+ta|172.16.73.1|dev|Someone searched for *blah song tit ta* and found 9 results.
+INFO|Sat, 08 Feb 2014 16:22:18 +1300|tasks|bloodhound|/search?query=daniel+and+merriott|172.16.73.1|dev|Someone searched for *daniel and merriott* and found 9 results.
+INFO|Sat, 08 Feb 2014 16:22:22 +1300|tasks|bloodhound|/search?query=daniel+%26+merriott|172.16.73.1|dev|Someone searched for *daniel &amp; merriott* and found 9 results.
+ERROR|Sat, 08 Feb 2014 16:23:00 +1300|template|parser|/search?query=daniel+and+merriott|172.16.73.1|dev|Cannot display tag `{{ _parsed_query }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Sat, 08 Feb 2014 16:23:20 +1300|template|parser|/search?query=daniel+and+merriott|172.16.73.1|dev|Cannot display tag `{{ _parsed_query:chunks }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Sat, 08 Feb 2014 16:23:23 +1300|template|parser|/search?query=daniel+and+merriott|172.16.73.1|dev|Cannot display tag `{{ _parsed_query:chunks }}` because it is a list, not a single value. To display list values, use a tag-pair.
+INFO|Sat, 08 Feb 2014 16:23:31 +1300|tasks|bloodhound|/search?query=daniel+merriott|172.16.73.1|dev|Someone searched for *daniel merriott* and found 9 results.
+ERROR|Sat, 08 Feb 2014 16:23:31 +1300|template|parser|/search?query=daniel+merriott|172.16.73.1|dev|Cannot display tag `{{ _parsed_query:chunks }}` because it is a list, not a single value. To display list values, use a tag-pair.

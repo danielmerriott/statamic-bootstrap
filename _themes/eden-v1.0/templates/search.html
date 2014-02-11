@@ -1,0 +1,18 @@
+<div class="row clearfix">
+  <div class="col-sm-8 col-md-9">
+  <section role="main">
+    {{ if alt_title }}
+    <h2>{{ alt_title }}</h2>
+    {{ else }}
+    <h2>{{ title }}</h2>
+    {{ endif }}
+    {{ content }}
+  </section><!-- END role="main" -->
+  <section class="search-results">
+    {{ theme:partial src="_search_results" }}
+  </section>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    {{ theme:partial src="_sidebar" }}
+  </div>
+</div>

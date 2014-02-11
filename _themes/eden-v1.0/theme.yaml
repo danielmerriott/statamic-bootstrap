@@ -1,0 +1,56 @@
+###########################################################################################
+#
+#  THEME VARIABLES
+#
+###########################################################################################
+
+# Theme name
+theme_name: Eden
+
+# Site Strap Line
+strap_line: "a bare-bones statamic theme"
+
+# Global text snippets
+no_results_text: "Sorry, no results found."
+
+# Site Description
+site_desc: "Enter a description which will display in your home page meta description and RSS feed."
+
+# Header modules to show/hide
+show_search: no
+show_social: no
+
+# Social Links
+followus_text: "Follow us"
+show_adn: yes
+adn_url: "//app.net/username"
+show_twitter: yes
+twitter_url: "//twitter.com/username"
+show_facebook: yes
+facebook_url: "//facebook.com/username"
+show_linkedin: yes
+linkedin_url: "//linkedin.com/username"
+show_rss: yes
+rss_url: "/feed"
+
+# Footer modules to show/hide
+show_privacy: yes
+show_copyright: yes
+show_statamic: yes
+
+# Site Copyright
+copyright_holder: "Company"
+copyright_start: "2013"
+copyright_url: "/copyright"
+
+# Site Privacy
+privacy_url: "/privacy"
+
+# Blog
+blog_name: blog
+show_tags: yes
+show_categories: yes
+
+# Comments + Disqus
+disqus_account: changeme
+show_comments

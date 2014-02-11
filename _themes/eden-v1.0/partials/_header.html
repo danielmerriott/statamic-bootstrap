@@ -1,0 +1,38 @@
+<div class="container">
+  <header role="banner" class="header" id="pagehead">
+  <div class="row clearfix">
+    <div class="col-xs-12">
+      <div class="page-header">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-banner">
+              <h1 class="logo">
+                <a href="{{ _site_url }}">{{ _site_name }}</a>
+              </h1>
+            </div>
+          </div>
+          <div class="col-sm-6 h3">
+            {{ if strap_line }}
+            <small class="strap-line">{{ strap_line }}</small>
+            {{ endif }}
+          </div>
+          <div class="col-sm-6 h3">
+            <small class="pull-right">
+            {{ theme:partial src="_social" }}
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="nav-wrap">
+  <div class="container navbar" id="nav-affix">
+  {{ theme:partial src="_nav" }}
+  </div>
+</div>
+<div class="container">
+  {{ theme:partial src="_breadcrumb" }}
+</div>
+</header>
+

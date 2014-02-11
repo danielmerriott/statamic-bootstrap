@@ -1,0 +1,73 @@
+<nav role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="/"><span class="fa fa-home fa-fw"</span></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="nav navbar-nav">
+      {{ nav from="/" max_depth="2" }}
+      {{ if children }}
+      <li class="dropdown {{ if is_current || is_parent }}active{{ endif }}">
+        <a href="{{ url }}" class="dropdown-toggle chevron-toggle" data-toggle="dropdown">{{ title }}</a>
+        <ul class="dropdown-menu">
+          <li {{ if is_current }} class="active" {{ endif }}>
+            <a href="{{ url }}">{{ title }}</a>
+          </li>
+          <li class="divider"></li>
+          {{ children }}
+          <li {{ if is_current || is_parent }}class="active"{{ endif }}>
+            <a href="{{ url }}">{{ title }}</a>
+          </li>
+          {{ /children }}
+        </ul>
+      </li>
+      {{ else }}
+      <li {{ if is_current || is_parent }}class="active"{{ endif }}>
+        <a href="{{ url }}">{{ title }}</a>
+      </li>
+      {{ endif }}
+      {{ /nav }}
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {{ if logged_in }}
+      <li class="dropdown hidden-xs">
+         <a href="#" class="dropdown-toggle chevron-toggle" data-toggle="dropdown">{{ username }} <span class="fa fa-user fa-fw"></span></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="/admin.php/member?name={{ username }}">My Account</a>
+          </li>
+          {{ if is_admin }}
+          <li class="divider"></li>
+          <li>
+            <a href="/admin.php/pages">Content</a>
+          </li>
+          <li>
+            <a href="/admin.php/members">Members</a>
+          </li>
+          <li>
+            <a href="/admin.php/system/security">Security</a>
+          </li>
+          <li>
+            <a href="/admin.php/system/logs">Log Files</a>
+          </li>
+          {{ endif }}
+          <li class="divider"></li>
+          <li>
+            <a href="{{ member:logout return="{{ page_url}}" }}">Log Out</a>
+          </li>
+        </ul>
+      </li>
+      {{ endif }}
+      <form class="nav navbar-form navbar-right navbar-input-group hidden-xs" id="nav-form-1" role="search" action="/search" method="get">
+        <div class="form-group">
+          <input type="text" class="form-control" name="query" required pattern="^[a-zA-Z0-9+-][a-zA-Z0-9-]+.*[a-zA-Z0-9]$" placeholder="Search" value="{{ get:query|sanitize }}">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="fa fa-search fa-fw"</span></button>
+      </form>
+      <form class="visible-xs" id="nav-form-2" role="search" action="/search" method="get">
+        <div class="form-group">
+          <input type="text" class="form-control" name="query" required pattern="^[a-zA-Z0-9+-][a-zA-Z0-9-]+.*[a-zA-Z0-9]$" placeholder="Search" value="{{ get:query|sanitize }}">
+        </div>
+      </form>
+    </ul>
+  </div>
+</nav>

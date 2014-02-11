@@ -1,0 +1,25 @@
+title: Jumbotron Front Page
+include: meta                  # include the meta fields
+include: jumbotron
+
+fields:
+  title:
+    instructions: "Enter the main page title here."
+
+  main_section:
+    type: section
+    display: Main Content
+    instructions: "Enter your main page content here."
+
+  _template:
+    type: hiden
+    default: frontpage-jumbotron
+
+  content:
+    display: Page Main Content
+    type: markitup
+    image_dir: assets/img/page  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main page content here."
+    
+# This is the standard page fieldset it pulls in the meta fields and sets the template to always use the page template.

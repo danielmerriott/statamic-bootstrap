@@ -1,0 +1,56 @@
+<div class="sidebar hidden-print" role="complementary" id="sidebar-affix">
+
+{{ if segment_1 == "blog" }}
+
+<div class="well">
+    This is where we write about things...
+</div>
+
+<div class="panel-group" id="panel-group-blog">
+  <div class="panel panel-default">
+    <div class="panel-heading collapsed clickable" data-toggle="collapse" data-parent="#panel-group-blog" data-target="#collapse-categories">
+      <h4 class="panel-title chevron-toggle">Categories</h4>
+    </div>
+    <div class="panel-collapse collapse list-group" id="collapse-categories">
+      {{ taxonomy:listing folder="blog" type="categories" sort_by="name" sort_dir="asc" }}
+      <a class="list-group-item" href="{{ url }}">{{ name }}<span class="badge">{{ results }}</span></a>
+      {{ /taxonomy:listing }}
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#panel-group-blog" data-target="#collapse-tags">
+      <h4 class="panel-title clickable chevron-toggle">Tags</h4>
+    </div>
+    <div class="panel-collapse collapse list-group" id="collapse-tags">
+      {{ taxonomy:listing folder="blog" type="tags" sort_by="name" sort_dir="asc" }}
+      {{ if no_results }}
+      <a class="list-group-item">No tags found</a>
+      {{ else }}
+      <a class="list-group-item" href="{{ url }}">{{ name }}<span class="badge">{{ results }}</span></a>
+      {{ endif }}
+      {{ /taxonomy:listing }}    
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#panel-group-blog" data-target="#collapse-authors">
+      <h4 class="panel-title clickable chevron-toggle">Authors</h4>
+    </div>
+    <div class="panel-collapse collapse list-group" id="collapse-authors">
+      {{ taxonomy:listing folder="blog" type="author" sort_by="name" sort_dir="asc" }}
+      {{ if no_results }}
+      <a class="list-group-item">No authors listed</a>
+      {{ else }}
+      <a class="list-group-item" href="{{ url }}">
+        {{ member:profile member="{name}" }}{{ first_name }} {{ last_name }}{{ /member:profile }}
+        <span class="badge">{{ results }}</span></a>
+      {{ endif }}
+      {{ /taxonomy:listing }}
+    </div>
+  </div>
+</div>
+
+{{ else }}
+
+{{ endif }}
+
+</div>

@@ -1,0 +1,22 @@
+<header role="banner" class="header">
+  <div class="container">
+    <h1 class="logo">
+      <a href="{{ _site_url }}">{{ _site_name }}</a>
+    </h1>
+    {{ if strap_line }}
+    <h2 class="strap-line">{{ strap_line }}</h2>
+    {{ endif }}
+    {{ theme:partial src="_nav" }}
+  </div><!-- END .container -->
+</header>
+
+{{# 
+====================================
+  NOTES
+====================================
+
+This is the main header partial.
+
+For more information on partials see http://statamic.com/learn/theming/partials.
+  
+#}}

@@ -1,0 +1,223 @@
+/* Add vertical scroll bar */
+html {
+  overflow-y: scroll;
+}
+
+/* Body padding */
+body {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 30px;
+  }
+}
+
+/* Affix'ed nav bar - width is container width */
+#nav-affix.affix {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+}
+@media (max-width: 768px) {
+  #nav-wrap {
+    height: 0 !important;
+  }
+  #nav-affix.affix-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  #nav-wrap {
+    height: 72px;
+  }
+  #nav-affix.affix {
+    width: 750px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 992px) {
+  #nav-affix.affix {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  #nav-affix.affix {
+    width: 1170px;
+  }
+}
+
+/* Affix'ed sidebar */
+@media (min-width: 768px) {
+  #sidebar-affix.affix {
+    position: fixed;
+    top: 70px;
+  }
+  #sidebar-affix.affix-bottom {
+    position: absolute;
+  }
+}
+@media (min-width: 768px) {
+  #sidebar-affix {
+    width: 220px;
+  }
+}
+@media (min-width: 992px) {
+  #sidebar-affix {
+    width: 212px;
+  }
+}
+@media (min-width: 1200px) {
+  #sidebar-affix {
+    width: 262px;
+  }
+}
+
+/* Add spacing above footer and reduce font-size */
+.page-footer {
+  margin-top: 20px;
+  font-size: smaller;
+}
+.page-footer .navbar-nav {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.page-footer-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+#pagefoot .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .page-footer-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #pagefoot .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+/* sidebar */
+.sidebar {
+  font-size: smaller;
+}
+
+/* Change mouse to a pointer for clickable item */
+.clickable {
+  cursor: pointer;
+}
+
+/* Disabled text wrap */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* medium size modal dialogue */
+.modal-md {
+  width: 400px
+}
+
+/* Flip a glyph */
+.glyphicon-flipped {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
+
+/* navbar form tweek - http://stackoverflow.com/questions/19893187/bootstrap-3-input-group-in-navbar-form-takes-up-entire-width */
+.navbar-input-group {
+  font-size: 0px; /*removes whitespace between button and input*/
+}
+.navbar-input-group input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.navbar-input-group .btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 0px;
+}
+
+/* vertical flip of the caret/icon in downdown nav menus */
+.icon-flip:not(.collapsed),
+.panel-heading:not(.collapsed) .caret,
+.dropdown.open .caret {
+  transform: scaleY(-1);
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+}
+
+
+/* Add chevron icons (up/down) for expandable panels */
+.dropdown .chevron-toggle:after,
+.panel-heading:not(.collapsed) .chevron-toggle:after,
+.panel-heading .chevron-toggle:after {
+  /* symbol for "opening" panels */
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  color: inherit;
+  width: 1.2857142857142858em;
+  text-align: center;
+  content: "\f0d8";
+}
+.dropdown:not(.open) .chevron-toggle:after,
+.panel-heading.collapsed .chevron-toggle:after {
+  /* symbol for "collapsed" panels */
+  content:"\f0d7";
+}
+
+/* fa-fw matching */
+.match-fa-fw {
+  display: inline-block;
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+/* Statamic Icon */
+@font-face {
+  font-family: 'StatamicIcons';
+  src: url("/admin/themes/ascent/webfonts/statamicicons/statamicicons-regular.eot");
+  src: url("/admin/themes/ascent/webfonts/statamicicons/statamicicons-regular.eot?#iefix") format("embedded-opentype"), url("/admin/themes/ascent/webfonts/statamicicons/statamicicons-regular.woff") format("woff"), url("/admin/themes/ascent/webfonts/statamicicons/statamicicons-regular.ttf") format("truetype"), url("/admin/themes/ascent/webfonts/statamicicons/statamicicons-regular.svg#statamic_iconsregular") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+.statamic-icon:after {
+  position: relative;
+  display: inline-block;
+  font-family: 'StatamicIcons';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  color: inherit;
+  font-size: 1.3em;
+  content: "s";
+}

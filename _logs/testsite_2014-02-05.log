@@ -1,0 +1,2608 @@
+FATAL|Wed, 05 Feb 2014 11:30:26 +1300|core|pi.listpages|/blog?page=2|172.16.73.1|dev|Undefined variable: fold on line 24.
+exception 'ErrorException' with message 'Undefined variable: fold' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:24
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(24): Slim\Slim::handleErrors(8, 'Undefined varia...', '/mnt/hgfs/danie...', 24, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#2 [internal function]: Statamic_View::callback('listpages', Array, '')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#8 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#14 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#20 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#28 [internal function]: {closure}(Array)
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#36 {main}
+FATAL|Wed, 05 Feb 2014 11:30:28 +1300|core|pi.listpages|/blog?page=2|172.16.73.1|dev|Undefined variable: fold on line 24.
+exception 'ErrorException' with message 'Undefined variable: fold' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:24
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(24): Slim\Slim::handleErrors(8, 'Undefined varia...', '/mnt/hgfs/danie...', 24, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#2 [internal function]: Statamic_View::callback('listpages', Array, '')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#8 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#14 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#20 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#28 [internal function]: {closure}(Array)
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#36 {main}
+FATAL|Wed, 05 Feb 2014 11:30:35 +1300|core|pi.listpages|/blog?page=2|172.16.73.1|dev|Undefined variable: fold on line 24.
+exception 'ErrorException' with message 'Undefined variable: fold' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:24
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(24): Slim\Slim::handleErrors(8, 'Undefined varia...', '/mnt/hgfs/danie...', 24, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#2 [internal function]: Statamic_View::callback('listpages', Array, '')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#8 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#14 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#20 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#28 [internal function]: {closure}(Array)
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#36 {main}
+FATAL|Wed, 05 Feb 2014 11:30:51 +1300|core|pi.listpages|/blog?page=2|172.16.73.1|dev|Undefined variable: fold on line 24.
+exception 'ErrorException' with message 'Undefined variable: fold' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:24
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(24): Slim\Slim::handleErrors(8, 'Undefined varia...', '/mnt/hgfs/danie...', 24, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#2 [internal function]: Statamic_View::callback('listpages', Array, '')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#8 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#14 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#20 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#28 [internal function]: {closure}(Array)
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#36 {main}
+FATAL|Wed, 05 Feb 2014 11:31:07 +1300|core|pi.listpages|/blog?page=2|172.16.73.1|dev|Undefined variable: fold on line 24.
+exception 'ErrorException' with message 'Undefined variable: fold' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:24
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(24): Slim\Slim::handleErrors(8, 'Undefined varia...', '/mnt/hgfs/danie...', 24, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#2 [internal function]: Statamic_View::callback('listpages', Array, '')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#8 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#14 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#20 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#28 [internal function]: {closure}(Array)
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#36 {main}
+FATAL|Wed, 05 Feb 2014 11:31:10 +1300|core|pi.listpages|/blog?page=2|172.16.73.1|dev|Undefined variable: fold on line 24.
+exception 'ErrorException' with message 'Undefined variable: fold' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:24
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(24): Slim\Slim::handleErrors(8, 'Undefined varia...', '/mnt/hgfs/danie...', 24, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#2 [internal function]: Statamic_View::callback('listpages', Array, '')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#8 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#14 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#20 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#28 [internal function]: {closure}(Array)
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#36 {main}
+FATAL|Wed, 05 Feb 2014 12:00:07 +1300|core|pi.listpages|/blog?page=4|172.16.73.1|dev|ceil() expects exactly 1 parameter, 2 given on line 16.
+exception 'ErrorException' with message 'ceil() expects exactly 1 parameter, 2 given' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:16
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'ceil() expects ...', '/mnt/hgfs/danie...', 16, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(16): ceil(3, 0)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#3 [internal function]: Statamic_View::callback('listpages', Array, '')
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#9 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#15 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#21 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#29 [internal function]: {closure}(Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#36 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#37 {main}
+FATAL|Wed, 05 Feb 2014 12:02:19 +1300|core|pi.listpages|/blog?page=4|172.16.73.1|dev|ceil() expects exactly 1 parameter, 2 given on line 19.
+exception 'ErrorException' with message 'ceil() expects exactly 1 parameter, 2 given' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php:19
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'ceil() expects ...', '/mnt/hgfs/danie...', 19, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/listpages/pi.listpages.php(19): ceil(3, 0)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_listpages->index()
+#3 [internal function]: Statamic_View::callback('listpages', Array, '')
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('?  ?  <div>?   ...', Array, Array)
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if total...', Array, Array, false)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if total...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#9 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if total...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#15 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#21 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#29 [internal function]: {closure}(Array)
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#33 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#34 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#35 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#36 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#37 {main}
+FATAL|Wed, 05 Feb 2014 20:24:47 +1300|Lex|Parser|/blog|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+  <p>Sorry there are no entries to display at this time.</p>
+  else: 
+
+    if (true): 
+    <ol class="articleList">
+    endif; 
+      <li class="articleList__item">
+        <article class="article">
+          <h3><a href="{{ url }}">{{ title }}</a></h3>
+          
+          if ('' || '2014-01-01' || 'cooking'): 
+          <div class="article__meta">
+          <p>Posted 
+            if (''): 
+            callback_blocks_83d0084c14e1229f45811d5072aec076
+            endif; 
+            if ('2014-01-01'): 
+            <span class="article__date">on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>
+            endif; 
+            if ('cooking'): 
+            <span class="article__category">in {{ categories_url_list }}</span>
+          </p>
+          </div><!-- END .article__meta -->
+          endif; 
+
+
+          <p class="article__more"><a href="{{ url }}">Keep Reading &rarr;</a></p>
+          
+        </article>
+      </li>
+    if (true): 
+    </ol>
+    endif; 
+
+  endif; 
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+  <p>Sorry there are no entries to display at this time.</p>
+  else: 
+
+    if (true): 
+    <ol class="articleList">
+    endif; 
+      <li class="articleList__item">
+        <article class="article">
+          <h3><a href="{{ url }}">{{ title }}</a></h3>
+          
+          if ('' || '2014-01-01' || 'cooking'): 
+          <div class="article__meta">
+          <p>Posted 
+            if (''): 
+            callback_blocks_83d0084c14e1229f45811d5072aec076
+            endif; 
+            if ('2014-01-01'): 
+            <span class="article__date">on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>
+            endif; 
+            if ('cooking'): 
+            <span class="article__category">in {{ categories_url_list }}</span>
+          </p>
+          </div><!-- END .article__meta -->
+          endif; 
+
+
+          <p class="article__more"><a href="{{ url }}">Keep Reading &rarr;</a></p>
+          
+        </article>
+      </li>
+    if (true): 
+    </ol>
+    endif; 
+
+  endif; 
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('?  <?php if (nu...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('?  {{ if no_res...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('?  {{ if no_res...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(71): Parse::template('?  {{ if no_res...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(61): Parse::tagLoop('?  {{ if no_res...', Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->listing()
+#6 [internal function]: Statamic_View::callback('entries:listing', Array, '?  {{ if no_res...')
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#12 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#20 [internal function]: {closure}(Array)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#28 {main}
+FATAL|Wed, 05 Feb 2014 20:25:15 +1300|Lex|Parser|/blog|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+  <p>Sorry there are no entries to display at this time.</p>
+  else: 
+
+    if (true): 
+    <ol class="articleList">
+    endif; 
+      <li class="articleList__item">
+        <article class="article">
+          <h3><a href="{{ url }}">{{ title }}</a></h3>
+          
+          if ('' || '2014-01-01' || 'cooking'): 
+          <div class="article__meta">
+          <p>Posted 
+            if (''): 
+            callback_blocks_73fb30011c3290c8dae17c173b0469cf
+            endif; 
+            if ('2014-01-01'): 
+            <span class="article__date">on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+            endif; 
+            if ('cooking'): 
+            <span class="article__category">in {{ categories_url_list }}</span>
+          </p>
+          </div><!-- END .article__meta -->
+          endif; 
+
+
+          <p class="article__more"><a href="{{ url }}">Keep Reading &rarr;</a></p>
+          
+        </article>
+      </li>
+    if (true): 
+    </ol>
+    endif; 
+
+  endif; 
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+  <p>Sorry there are no entries to display at this time.</p>
+  else: 
+
+    if (true): 
+    <ol class="articleList">
+    endif; 
+      <li class="articleList__item">
+        <article class="article">
+          <h3><a href="{{ url }}">{{ title }}</a></h3>
+          
+          if ('' || '2014-01-01' || 'cooking'): 
+          <div class="article__meta">
+          <p>Posted 
+            if (''): 
+            callback_blocks_73fb30011c3290c8dae17c173b0469cf
+            endif; 
+            if ('2014-01-01'): 
+            <span class="article__date">on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+            endif; 
+            if ('cooking'): 
+            <span class="article__category">in {{ categories_url_list }}</span>
+          </p>
+          </div><!-- END .article__meta -->
+          endif; 
+
+
+          <p class="article__more"><a href="{{ url }}">Keep Reading &rarr;</a></p>
+          
+        </article>
+      </li>
+    if (true): 
+    </ol>
+    endif; 
+
+  endif; 
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('?  <?php if (nu...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('?  {{ if no_res...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('?  {{ if no_res...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(71): Parse::template('?  {{ if no_res...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(61): Parse::tagLoop('?  {{ if no_res...', Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->listing()
+#6 [internal function]: Statamic_View::callback('entries:listing', Array, '?  {{ if no_res...')
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#12 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#20 [internal function]: {closure}(Array)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#28 {main}
+ERROR|Wed, 05 Feb 2014 21:14:53 +1300|page|content|/assets/img/empty.gic|172.16.73.1|dev|404 - Page not found. There is a bad link on <a href="/blog">/blog</a>.
+FATAL|Wed, 05 Feb 2014 23:44:11 +1300|Lex|Parser|/blog?page=2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??<?php if (2 >...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??{{ if current...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??{{ if current...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??{{ if current...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??{{ if current...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:44:35 +1300|Lex|Parser|/blog?page=2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??<?php if (2 >...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??{{ if current...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??{{ if current...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??{{ if current...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??{{ if current...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:44:37 +1300|Lex|Parser|/blog?page=1|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+if (1 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (1 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+if (1 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (1 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??<?php if (1 >...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??{{ if current...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??{{ if current...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??{{ if current...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??{{ if current...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:44:40 +1300|Lex|Parser|/blog?page=2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??<?php if (2 >...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??{{ if current...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??{{ if current...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??{{ if current...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??{{ if current...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:44:41 +1300|Lex|Parser|/blog?page=12|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+if (12 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (12 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=11'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+if (12 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (12 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=11'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??<?php if (12 ...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??{{ if current...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??{{ if current...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??{{ if current...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??{{ if current...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:45:45 +1300|Lex|Parser|/blog?page=2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+if (2 > 2): 
+  {{ redirect url="{ url }?page={ total_pages }" }}
+endif; 
+if (2 = 1): 
+  {{ redirect url="{ url }" }}
+endif; 
+
+
+  if (2 > 1): 
+
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??<?php if (2 >...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??{{ if current...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??{{ if current...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??{{ if current...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??{{ if current...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:51:19 +1300|Lex|Parser|/blog?page=-2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } <= 1): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } <= 1): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if (1...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if curre...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if curre...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if curre...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if curre...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:51:29 +1300|Lex|Parser|/blog?page=-2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 1): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 1): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if (1...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if curre...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if curre...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if curre...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if curre...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:51:43 +1300|Lex|Parser|/blog?page=-2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({{ '-2'):  < 1 }}
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({{ '-2'):  < 1 }}
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if (1...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if curre...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if curre...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if curre...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if curre...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:03 +1300|Lex|Parser|/blog?page=-2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if (1 > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if (1...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if curre...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if curre...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if curre...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if curre...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:31 +1300|Lex|Parser|/blog?page=-2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '-2' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '-2' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ({...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if { get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if { get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if { get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if { get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:34 +1300|Lex|Parser|/blog?page=-2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '-2' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '-2' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '-2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ({...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if { get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if { get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if { get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if { get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:34 +1300|Lex|Parser|/blog?page=2|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '2' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '2' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '2' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=1'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ({...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if { get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if { get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if { get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if { get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:35 +1300|Lex|Parser|/blog?page=22|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '22' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '22' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=21'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '22' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+  if ({ '22' } < 2): 
+    {{ redirect url="{ url }?page=1" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=21'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ({...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if { get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if { get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if { get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if { get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:45 +1300|Lex|Parser|/blog?page=22|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '22' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=21'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '22' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=21'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ({...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if { get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if { get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if { get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if { get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:52:47 +1300|Lex|Parser|/blog?page=22|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '22' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=21'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ({ '22' } > 2): 
+    {{ redirect url="{ url }?page={ total_pages }" }}
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if ('?page=21'): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if (false): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ({...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if { get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if { get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if { get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if { get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:56:01 +1300|Lex|Parser|/blog?page=0|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  {{! if get:page|empty }}
+    if ('0' > 2): 
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    endif; 
+    if ('0' < 1): 
+      {{ redirect url="{ url }" }}
+    endif; 
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  {{! if get:page|empty }}
+    if ('0' > 2): 
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    endif; 
+    if ('0' < 1): 
+      {{ redirect url="{ url }" }}
+    endif; 
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  {{! if get:...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{! if get:...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{! if get:...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{! if get:...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{! if get:...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:56:12 +1300|Lex|Parser|/blog?page=0|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  {{ ! if get:page|empty }}
+    if ('0' > 2): 
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    endif; 
+    if ('0' < 1): 
+      {{ redirect url="{ url }" }}
+    endif; 
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  {{ ! if get:page|empty }}
+    if ('0' > 2): 
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    endif; 
+    if ('0' < 1): 
+      {{ redirect url="{ url }" }}
+    endif; 
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  {{ ! if get...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ ! if get...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ ! if get...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ ! if get...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ ! if get...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}
+FATAL|Wed, 05 Feb 2014 23:57:41 +1300|Lex|Parser|/blog?page=0|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+
+  if ('0'): 
+    if ('0' > 2): 
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    endif; 
+    if ('0' < 2 || '0' = 0): 
+      {{ redirect url="{ url }" }}
+    endif; 
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+
+  if ('0'): 
+    if ('0' > 2): 
+      {{ redirect url="{ url }?page={ total_pages }" }}
+    endif; 
+    if ('0' < 2 || '0' = 0): 
+      {{ redirect url="{ url }" }}
+    endif; 
+  endif; 
+
+  <div>current page {{ current_page }} - {{ get:page }}</div>
+
+  if (2 > 1): 
+  <div class="clearfix center-block">
+    <ul class="pagination pagination-sm">
+    if (false): 
+      <li><a href="{{ url }}?page=1"><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></a></li>
+      <li><a href="{{ previous_page }}"><span class="fa fa-caret-left"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-left"></span><span class="fa fa-caret-left"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-left"></span></span></li>
+    endif; 
+
+    
+    {{ listpages current_page="{current_page}" total_pages="{total_pages}" pages_to_show="5" }}
+
+    if ('?page=2'): 
+      <li><a href="{{ next_page }}"><span class="fa fa-caret-right"></span></a></li>
+      <li><a href="{{ url }}?page={{ total_pages }}"><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></a></li>
+    else: 
+      <li class="disabled"><span><span class="fa fa-caret-right"></span></span></li>
+      <li class="disabled"><span><span class="fa fa-caret-right"></span><span class="fa fa-caret-right"></span></span></li>
+    endif; 
+    </ul>
+  </div><!-- END .pagination -->
+  endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('??  <?php if ('...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('??  {{ if get:p...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('??  {{ if get:p...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/entries/pi.entries.php(118): Parse::template('??  {{ if get:p...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_entries->pagination()
+#5 [internal function]: Statamic_View::callback('entries:paginat...', Array, '??  {{ if get:p...')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:pagi...', Array, 'Statamic_View::...')
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:pagi...', Array, 'Statamic_View::...', false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:pagi...', Array, 'Statamic_View::...')
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#11 [internal function]: Statamic_View::callback('theme:partial', Array, '')
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ entries:list...', Array, 'Statamic_View::...')
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ entries:list...', Array, 'Statamic_View::...', false)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ entries:list...', Array, 'Statamic_View::...')
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#17 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#25 [internal function]: {closure}(Array)
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#28 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#29 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#30 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#31 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#32 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#33 {main}

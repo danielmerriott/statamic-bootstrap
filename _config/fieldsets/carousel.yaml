@@ -1,0 +1,48 @@
+hide: true
+
+fields:
+  carousel_section:
+    type: section
+    display: Carousel Section
+    instructions: 
+      below: "Use these fields to configure the carousel."
+  carousel1_caption:
+    display: First Carousel Caption
+    type: text
+    instructions:
+      below: "Enter the text/markup for the first image used in the carousel."
+  carousel1_image_src:
+    display: First Carousel Link Destination
+    type: text
+    instructions:
+      below: "Enter the URL the first image used in the carousel will link to."
+  carousel2_image_src:
+    display: First Carousel Image
+    type: text
+    instructions:
+      below: "Enter the URL to the second image used in the carousel."
+  carousel2_caption:
+    display: Second Carousel Caption
+    type: text
+    instructions:
+      below: "Enter the text/markup for the second image used in the carousel."
+  carousel2_image_src:
+    display: Second Carousel Link Destination
+    type: text
+    instructions:
+      below: "Enter the URL the second image used in the carousel will link to."
+  carousel3_image_src:
+    display: Third Carousel Image
+    type: text
+    instructions:
+      below: "Enter the URL to the third image used in the carousel."
+  carousel3_caption:
+    display: Third Carousel Caption
+    type: text
+    instructions:
+      below: "Enter the text/markup for the third image used in the carousel."
+  carousel3_image_src:
+    display: Third Carousel Link Destination
+    type: text
+    instructions:
+      below: "Enter the URL the third image used in the carousel will link to."

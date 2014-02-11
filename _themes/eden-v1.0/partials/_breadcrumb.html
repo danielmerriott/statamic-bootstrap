@@ -1,0 +1,10 @@
+<ul class="breadcrumb hidden-xs hidden-sm">
+  <li {{ if segment_1 == "" }} class="active" {{ endif }}>
+    <a {{ if segment_1 == "" }} {{else}} href="/" {{endif}}>Home</a>
+  </li>
+  {{ nav:breadcrumbs include_home="no"}}
+  <li {{ if is_current }}class="active"{{endif}}>
+    <a {{ if is_current }} {{else}} href="{{ url }}" {{endif}}>{{ title }}</a>
+  </li>
+  {{ /nav:breadcrumbs }}
+</ul>
