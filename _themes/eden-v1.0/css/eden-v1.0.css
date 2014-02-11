@@ -14,17 +14,101 @@ body {
   }
 }
 
+/* tweak 'media' in panels */
+.media.panel-body {
+  margin-top: 0;
+}
+.article-heading {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+article.panel {
+  border-color: rgb(221, 221, 221);
+}
+article.panel.featured {  
+}
+
+
+/* Single Article View */
+/* images & figures */
+.article-single .img-main {
+  display: block;
+  height: auto;
+  width: 100%;
+  margin: 5px 0 10px;
+}
+.article-single .content-main figure,
+.article-single .content-main img {
+  display: block;
+  height: auto;
+  width: 90%;
+  margin: 5px auto 10px;
+}
+.article-single .content-main figure>img { margin: 0; width: 100%; }
+.article-single .content-main figcaption:before {
+  content: "Caption: ";
+}
+.article-single .content-main figcaption {
+  width: 100%;
+  background: black;
+  color: white;
+  font-style: italic;
+  padding: 5px 10px;
+  margin: 0 auto 10px; 
+}
+/* main image */
+@media (min-width: 992px) {
+  .article-single .img-main {
+    width: 50%;
+    float: left;
+    margin-right: 10px;
+  }
+}
+/* images & figures - http://css-tricks.com/examples/SlideinCaptions */
+@media (min-width: 992px) {
+  .article-single .content-main img,
+  .article-single .content-main figure {
+    float: left;
+    width: 33%;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .article-single .content-main img.img-right,
+  .article-single .content-main figure.img-right {
+    float: right;
+    width: 33%;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  .article-single .content-main figure { display: block; position: relative;  overflow: hidden; }
+  .article-single .content-main figcaption:before { content: ""; }
+  .article-single .content-main figcaption { 
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+    font-style: normal;
+    padding: 10px 15px;
+    margin: 0;
+    opacity: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+  }
+  .article-single .content-main figure figcaption { left: 0; bottom: -30%; }
+  .article-single .content-main figure:hover figcaption { opacity: 1; bottom: 0; }
+}
+
 /* Affix'ed nav bar - width is container width */
 #nav-affix.affix {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
 }
 @media (max-width: 768px) {
   #nav-wrap {
@@ -199,6 +283,33 @@ body {
   display: inline-block;
   width: 1.2857142857142858em;
   text-align: center;
+}
+
+/* floating alert bar - will fade in through javascript */
+.alert-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2000;
+  border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+  .alert-fixed-top {
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .alert-fixed-top {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .alert-fixed-top {
+    width: 1170px;
+  }
 }
 
 /* Statamic Icon */

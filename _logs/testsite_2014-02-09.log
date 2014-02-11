@@ -4405,3 +4405,464 @@ Stack trace:
 #26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
 #27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
 #28 {main}
+INFO|Sun, 09 Feb 2014 16:52:30 +1300|tasks|bloodhound|/search?query=daniel+merriott|172.16.73.1|dev|Someone searched for *daniel merriott* and found 13 results.
+FATAL|Sun, 09 Feb 2014 17:17:28 +1300|core|comb|/search?query=%2Bdaniel+merriott|172.16.73.1|dev|preg_match_all(): Compilation failed: nothing to repeat at offset 1 on line 522.
+exception 'ErrorException' with message 'preg_match_all(): Compilation failed: nothing to repeat at offset 1' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/comb.php:522
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'preg_match_all(...', '/mnt/hgfs/danie...', 522, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/comb.php(522): preg_match_all('#^+daniel merri...', 'page', NULL)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/comb.php(261): Comb->searchOverData(Array, '+daniel merriot...')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/tasks.bloodhound.php(54): Comb->lookUp('+daniel merriot...')
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/pi.bloodhound.php(27): Tasks_bloodhound->lookUp('+daniel merriot...', Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_bloodhound->search()
+#6 [internal function]: Statamic_View::callback('bloodhound:sear...', Array, '?  {{ if not_en...')
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ bloodhound:s...', Array, 'Statamic_View::...', false)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#12 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#20 [internal function]: {closure}(Array)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#28 {main}
+INFO|Sun, 09 Feb 2014 17:17:59 +1300|tasks|bloodhound|/search?query=daniel+%2Bmerriott|172.16.73.1|dev|Someone searched for *daniel +merriott* and found 6 results.
+ERROR|Sun, 09 Feb 2014 17:18:24 +1300|tasks|bloodhound|/search?query=daniel+-merriott|172.16.73.1|dev|Empty haystack.
+WARN|Sun, 09 Feb 2014 17:18:24 +1300|tasks|bloodhound|/search?query=daniel+-merriott|172.16.73.1|dev|Someone searched for *daniel -merriott* and no results were found.
+FATAL|Sun, 09 Feb 2014 17:18:32 +1300|core|comb|/search?query=%2Bdaniel+merriott|172.16.73.1|dev|preg_match_all(): Compilation failed: nothing to repeat at offset 1 on line 522.
+exception 'ErrorException' with message 'preg_match_all(): Compilation failed: nothing to repeat at offset 1' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/comb.php:522
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'preg_match_all(...', '/mnt/hgfs/danie...', 522, Array)
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/comb.php(522): preg_match_all('#^+daniel merri...', 'page', NULL)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/comb.php(261): Comb->searchOverData(Array, '+daniel merriot...')
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/tasks.bloodhound.php(54): Comb->lookUp('+daniel merriot...')
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/pi.bloodhound.php(27): Tasks_bloodhound->lookUp('+daniel merriot...', Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_bloodhound->search()
+#6 [internal function]: Statamic_View::callback('bloodhound:sear...', Array, '?  {{ if not_en...')
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ bloodhound:s...', Array, 'Statamic_View::...', false)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#12 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#20 [internal function]: {closure}(Array)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#28 {main}
+WARN|Sun, 09 Feb 2014 17:46:18 +1300|tasks|bloodhound|/search?query=origanmi|172.16.73.1|dev|Someone searched for *origanmi* and no results were found.
+INFO|Sun, 09 Feb 2014 17:47:25 +1300|tasks|bloodhound|/search?query=admin|172.16.73.1|dev|Someone searched for *admin* and found 2 results.
+INFO|Sun, 09 Feb 2014 17:50:05 +1300|tasks|bloodhound|/search?query=daniel|172.16.73.1|dev|Someone searched for *daniel* and found 13 results.
+INFO|Sun, 09 Feb 2014 18:09:14 +1300|tasks|bloodhound|/search?query=post|172.16.73.1|dev|Someone searched for *post* and found 1 result.
+FATAL|Sun, 09 Feb 2014 18:10:37 +1300|Lex|Parser|/search?query=post|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>A longer search term is required. Please type a couple more characters in the search form above.</div>
+  elseif (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>No results found. Please try another search term.</div>
+  elseif (null): 
+    <div>Looks like you haven't yet searched for something. Use the search form in the navbar above to search for something.</div>
+  else: 
+    if (true): 
+    <div>Search results for '<strong>{{ _query }}</strong>' -  {{ total_results }} results foundif (false):  (in {{ _query_time|*:1000|round }} ms)endif; :</div>
+      <div class="panel-group" id="search-results-group">
+    endif; 
+        <article class="media panel if ('is_featured'=="is_featured"): panel-defaultendif; ">
+            <div class="media-body panel-heading">
+              <h4 class="media-heading">
+                <a href="{{ url }}">{{ title }}</a>
+                if (false): &nbsp;<span class="badge">{{ _score }}</span>&nbsp;endif; 
+                if (!'This is a long ipsum lorem post.' && !'<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>'): 
+                <span class="fa fa-fw fa-minus-circle disabled text-muted" title="No summary available"></span>
+                else: 
+                <span class="fa fa-fw fa-chevron-circle-down icon-flip collapsed text-muted clickable" title="Expand for summary" data-toggle="collapse" data-parent="#search-results-group" data-target="#search-result-{{ count }}"></span>
+                endif; 
+                <small class="text-muted">
+                if ('is_featured'=="is_featured"): panel-defaultendif; 
+                  featured post
+                elseif ('danielmerriott' && '2014-02-06'): 
+                  post
+                elseif ('post'=="search"): 
+                  page
+                else: 
+                  {{ _template }}
+                endif; 
+                - <a href="{{ url }}" title="Open '{{ title }}'">{{ url|truncate:50 }}</a>
+                </small>
+              </h4>
+            </div>
+            <div class="collapse" id="search-result-{{ count }}">
+              <div class="panel-body">
+                if ('danielmerriott' || '2014-02-06' || 'Longform'): 
+                <div class="media-metadata text-muted">
+                  <p>Posted
+                    if ('true'): 
+                    callback_blocks_6a849dca1adea6b62403220cb7c4836b
+                    endif; 
+                    if ('2014-02-06'): 
+                    on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+                    endif; 
+                    if ('Longform'): 
+                    in <span class="article__category">{{ categories_list|title }}</span>
+                    endif; 
+                  </p>
+                </div><!-- END .article__meta -->
+                endif; 
+                <div class="media-summary">
+                  if ('This is a long ipsum lorem post.'): 
+                  {{ summary|smartypants|markdown|striptags }}
+                  else: 
+                  {{ content|striptags|smartypants|markdown|striptags|truncate:200 }}
+                  endif; 
+                </div>
+              </div>
+            </div>
+        </article>
+    if (true): 
+      </div>
+    endif; 
+  endif; 
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: 
+  if (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>A longer search term is required. Please type a couple more characters in the search form above.</div>
+  elseif (null): 
+    <div>Search results for '<strong>{{ _query }}</strong>'</div>
+    <div>No results found. Please try another search term.</div>
+  elseif (null): 
+    <div>Looks like you haven't yet searched for something. Use the search form in the navbar above to search for something.</div>
+  else: 
+    if (true): 
+    <div>Search results for '<strong>{{ _query }}</strong>' -  {{ total_results }} results foundif (false):  (in {{ _query_time|*:1000|round }} ms)endif; :</div>
+      <div class="panel-group" id="search-results-group">
+    endif; 
+        <article class="media panel if ('is_featured'=="is_featured"): panel-defaultendif; ">
+            <div class="media-body panel-heading">
+              <h4 class="media-heading">
+                <a href="{{ url }}">{{ title }}</a>
+                if (false): &nbsp;<span class="badge">{{ _score }}</span>&nbsp;endif; 
+                if (!'This is a long ipsum lorem post.' && !'<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+
+<p>Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>'): 
+                <span class="fa fa-fw fa-minus-circle disabled text-muted" title="No summary available"></span>
+                else: 
+                <span class="fa fa-fw fa-chevron-circle-down icon-flip collapsed text-muted clickable" title="Expand for summary" data-toggle="collapse" data-parent="#search-results-group" data-target="#search-result-{{ count }}"></span>
+                endif; 
+                <small class="text-muted">
+                if ('is_featured'=="is_featured"): panel-defaultendif; 
+                  featured post
+                elseif ('danielmerriott' && '2014-02-06'): 
+                  post
+                elseif ('post'=="search"): 
+                  page
+                else: 
+                  {{ _template }}
+                endif; 
+                - <a href="{{ url }}" title="Open '{{ title }}'">{{ url|truncate:50 }}</a>
+                </small>
+              </h4>
+            </div>
+            <div class="collapse" id="search-result-{{ count }}">
+              <div class="panel-body">
+                if ('danielmerriott' || '2014-02-06' || 'Longform'): 
+                <div class="media-metadata text-muted">
+                  <p>Posted
+                    if ('true'): 
+                    callback_blocks_6a849dca1adea6b62403220cb7c4836b
+                    endif; 
+                    if ('2014-02-06'): 
+                    on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+                    endif; 
+                    if ('Longform'): 
+                    in <span class="article__category">{{ categories_list|title }}</span>
+                    endif; 
+                  </p>
+                </div><!-- END .article__meta -->
+                endif; 
+                <div class="media-summary">
+                  if ('This is a long ipsum lorem post.'): 
+                  {{ summary|smartypants|markdown|striptags }}
+                  else: 
+                  {{ content|striptags|smartypants|markdown|striptags|truncate:200 }}
+                  endif; 
+                </div>
+              </div>
+            </div>
+        </article>
+    if (true): 
+      </div>
+    endif; 
+  endif; 
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('?  <?php if (nu...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('?  {{ if not_en...', Array, Array)
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('?  {{ if not_en...', Array, Array, false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(71): Parse::template('?  {{ if not_en...', Array)
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_add-ons/bloodhound/pi.bloodhound.php(56): Parse::tagLoop('?  {{ if not_en...', Array)
+#5 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_bloodhound->search()
+#6 [internal function]: Statamic_View::callback('bloodhound:sear...', Array, '?  {{ if not_en...')
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array('Statamic_View::...', Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('{{ bloodhound:s...', Array, 'Statamic_View::...', false)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('{{ bloodhound:s...', Array, 'Statamic_View::...')
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#12 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#13 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#20 [internal function]: {closure}(Array)
+#21 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#22 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#23 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#24 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#25 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#26 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#27 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#28 {main}
+INFO|Sun, 09 Feb 2014 18:30:01 +1300|tasks|bloodhound|/search?query=cake|172.16.73.1|dev|Someone searched for *cake* and found 5 results.
+INFO|Sun, 09 Feb 2014 19:19:04 +1300|tasks|bloodhound|/search?query=dan|172.16.73.1|dev|Someone searched for *dan* and found 13 results.
+FATAL|Sun, 09 Feb 2014 19:40:01 +1300|Lex|Parser|/blog/example-article-three|172.16.73.1|dev|You have a syntax error in your Lex tags. The offending code: <article class="panel">
+  <header class="panel-heading">
+    if (''): 
+    <h2 class="article-heading">{{ alt_title }}</h2>
+    else: 
+    <h2 class="article-heading">{{ title }}</h2>
+    endif; 
+  </header>
+
+  <div class="panel-body media">
+    if ('danielmerriott' || '2013-03-03' || 'cooking'): 
+    <div class="text-muted">
+      <p>if ('not_featured'=="is_featured"): Featured postelse: Postedendif; 
+         if ('true'): 
+         callback_blocks_a2a7a8a344f3834ed70181b245e6696a
+         endif; 
+         if ('2013-03-03'): 
+         on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+         endif; 
+         if ('cooking'): 
+         in <span class="article__category">{{ categories_url_list|title }}</span>
+         endif; 
+      </p>
+    </div><!-- END .article__meta -->
+
+  if ('true'): 
+  <img src="{{ main_img }}" alt="main image for {{ title }}" class="media-image img-rounded">
+  endif; 
+
+  <div class="lead">
+  {{ summary|smartypants|markdown }}
+  </div><!-- END .lead -->
+
+  <div class="main-content">
+  {{ content }}
+  </div><!-- END .main-content -->
+  
+  <footer>
+    <a href="/">&larr; back</a>
+  </footer>
+</article>
+
+if (null): 
+<div class="comments">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{disqus_account}" }}
+</div>
+endif; 
+
+ on line 1349.
+exception 'Lex\ParsingException' with message 'You have a syntax error in your Lex tags. The offending code: <article class="panel">
+  <header class="panel-heading">
+    if (''): 
+    <h2 class="article-heading">{{ alt_title }}</h2>
+    else: 
+    <h2 class="article-heading">{{ title }}</h2>
+    endif; 
+  </header>
+
+  <div class="panel-body media">
+    if ('danielmerriott' || '2013-03-03' || 'cooking'): 
+    <div class="text-muted">
+      <p>if ('not_featured'=="is_featured"): Featured postelse: Postedendif; 
+         if ('true'): 
+         callback_blocks_a2a7a8a344f3834ed70181b245e6696a
+         endif; 
+         if ('2013-03-03'): 
+         on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+         endif; 
+         if ('cooking'): 
+         in <span class="article__category">{{ categories_url_list|title }}</span>
+         endif; 
+      </p>
+    </div><!-- END .article__meta -->
+
+  if ('true'): 
+  <img src="{{ main_img }}" alt="main image for {{ title }}" class="media-image img-rounded">
+  endif; 
+
+  <div class="lead">
+  {{ summary|smartypants|markdown }}
+  </div><!-- END .lead -->
+
+  <div class="main-content">
+  {{ content }}
+  </div><!-- END .main-content -->
+  
+  <footer>
+    <a href="/">&larr; back</a>
+  </footer>
+</article>
+
+if (null): 
+<div class="comments">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{disqus_account}" }}
+</div>
+endif; 
+
+' in /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php:1349
+Stack trace:
+#0 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(658): Lex\Parser->parsePhp('<article class=...')
+#1 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(103): Lex\Parser->parseConditionals('<article class=...', Array, 'Statamic_View::...')
+#2 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/api/parse.php(40): Lex\Parser->parse('<article class=...', Array, 'Statamic_View::...', false)
+#3 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/tags/theme/pi.theme.php(28): Parse::template('<article class=...', Array, 'Statamic_View::...')
+#4 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(207): Plugin_theme->partial()
+#5 [internal function]: Statamic_View->callback('theme:partial', Array, '')
+#6 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(384): call_user_func_array(Array, Array)
+#7 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Lex/Parser.php(109): Lex\Parser->parseCallbackTags('<div class="row...', Array, Array)
+#8 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/core/view.php(80): Lex\Parser->parse('<div class="row...', Array, Array, false)
+#9 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(195): Statamic_View->render(NULL)
+#10 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/View.php(182): Slim\View->fetch(NULL)
+#11 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(672): Slim\View->display(NULL)
+#12 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/routes.php(366): Slim\Slim->render(NULL, Array, 200)
+#13 [internal function]: {closure}(Array)
+#14 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#15 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#16 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#17 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#18 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#19 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/_app/vendor/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#20 /mnt/hgfs/danielmerriott/mnt-data/www/testsite/htdocs/live/index.php(65): Slim\Slim->run()
+#21 {main}
+ERROR|Sun, 09 Feb 2014 19:40:02 +1300|page|content|/blog/{{%20main_img%20}}|172.16.73.1|dev|404 - Page not found. There is a bad link on <a href="/blog/example-article-three">/blog/example-article-three</a>.
+INFO|Sun, 09 Feb 2014 22:20:25 +1300|tasks|bloodhound|/search?query=dan|172.16.73.1|dev|Someone searched for *dan* and found 13 results.

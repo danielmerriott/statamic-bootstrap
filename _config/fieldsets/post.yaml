@@ -27,8 +27,8 @@ fields:
     type: select
     instructions: "Select if you would like this to be featured."
     options:
-      not_featured: "No"
-      is_featured: "Yes"
+      no: "No"
+      yes: "Yes"
 
   categories:
     display: Categories

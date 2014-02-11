@@ -8,24 +8,21 @@
   {{ else }}
 
     {{ if first }}
-    <ul class="media-list">
+    <div class="panel-group" id="entries-listing-group">
     {{ endif }}
-      <li class="media">
-        {{ if main_img|not_empty }}
-        <a class="pull-left" href="{{ url }}">
-          <img class="media-object" src="{{ transform src="{ main_img }" width="96" height="96" action="smart" }}" alt="...">
-        </a>
-        {{ else }}
-        <a class="pull-left">
-          <img class="media-object" src="/assets/img/empty.gif" width="96" height="96" alt="empty">
-        </a>
-        {{ endif }}
-        <div class="media-body">
-          <article class="article">
-            <h4 class="media-heading"><a href="{{ url }}">{{ title }}</a></h4>          
-            {{ if author || date || categories_list }}
-            <div class="media-metadata text-muted">
-            <p>Posted 
+      <article class="panel {{ if featured=="is_featured" }}panel-default{{ endif }}">
+        <header class="panel-heading">
+          <h3 class="article-heading"><a href="{{ url }}">{{ title }}{{ if featured=="is_featured" }}<span class="fa fa-fw fa-star-o pull-right" title="Featured Post"></span>{{ endif }}</a></h3>          
+        </header>
+        <div class="panel-body media">
+          {{ if main_img|not_empty }}
+          <a class="pull-left" href="{{ url }}">
+            <img class="media-object img-thumbnail" src="{{ transform src="{ main_img }" width="96" height="96" action="smart" }}" alt="main image for {{ title }}">
+          </a>
+          {{ endif }}
+          {{ if author || date || categories_list }}
+          <div class="text-muted">
+            <p>{{ if featured=="is_featured" }}Featured post{{ else }}Posted{{ endif }} 
               {{ if author|not_empty }}
               {{ member:profile member="{author}" }}
               by <span class="article__author">
@@ -33,9 +30,6 @@
               {{ first_name }} {{ last_name }}
               {{ if author_url }}</a>{{ endif }}
               </span>
-              {{# if gravatar #}}
-              <span>{{ get_gravatar }}</span>
-              {{# endif #}}
               {{ /member:profile }}
               {{ endif }}
               {{ if date }}
@@ -45,16 +39,19 @@
               in <span class="article__category">{{ categories_url_list|title }}</span>
               {{ endif }}
             </p>
-            </div><!-- END .article__meta -->
+          </div><!-- END .article__meta -->
+          {{ endif }}
+          <div class="media-summary">
+            {{ if summary }}
+            {{ summary|smartypants|markdown }}
+            {{ else }}
+            {{ content|striptags|truncate:250 }}
             {{ endif }}
-            <div class="media-summary">
-              {{ summary|smartypants|markdown }}
-            </div>
-          </article>
-        </div><!-- END .media-body -->
-      </li>
+          </div>
+        </div><!-- END .panel-body .media -->
+      </article>
     {{ if last }}
-    </ul>
+    </div>
     {{ endif }}
 
   {{ endif }}

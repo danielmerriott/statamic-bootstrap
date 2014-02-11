@@ -10,65 +10,72 @@
   {{ else }}
     {{ if first }}
     <div>Search results for '<strong>{{ _query }}</strong>' -  {{ total_results }} results found{{ if is_admin}} (in {{ _query_time|*:1000|round }} ms){{ endif }}:</div>
-      <ul class="media-list">
+      <div class="panel-group" id="search-results-group">
     {{ endif }}
-        <li class="media">
-          <div class="media-body">
-            <article class="article">
-              <h4 class="media-heading">
-                <a href="{{ url }}">{{ title }}</a>
-                {{ if is_admin }}&nbsp;<span class="badge">{{ _score }}</span>&nbsp;{{ endif }}
-                {{ if !summary && !content }}
-                <span class="fa fa-fw fa-minus-circle disabled text-muted" title="No summary available"></span>
-                {{ else }}
-                <span class="fa fa-fw fa-chevron-circle-down icon-flip collapsed text-muted clickable" title="Expand for summary" data-toggle="collapse" data-target="#search-result-{{ count }}"></span>
-                {{ endif }}
-                <small class="text-muted">
-                {{ if author && date }}
-                  post
+        <article class="panel {{ if featured=="is_featured" }}panel-default{{ endif }}">
+          <header class="panel-heading">
+            <h4 class="article-heading">
+              <a href="{{ url }}">{{ title|truncate:50 }}{{ if featured=="is_featured" }}<span class="fa fa-fw fa-star-o pull-right" title="Featured Post"></span>{{ endif }}</a>
+              {{ if is_admin }}&nbsp;<span class="badge">{{ _score }}</span>&nbsp;{{ endif }}
+              {{ if !summary && !content }}
+              <span class="fa fa-fw fa-minus-circle disabled text-muted" title="No summary available"></span>
+              {{ else }}
+              <span class="fa fa-fw fa-chevron-circle-down icon-flip collapsed text-muted clickable" title="Expand for summary" data-toggle="collapse" data-parent="#search-results-group" data-target="#search-result-{{ count }}"></span>
+              {{ endif }}
+              <small class="text-muted">
+                {{ if featured=="is_featured" }}
+                featured post
+                {{ elseif author && date }}
+                post
                 {{ elseif _template=="search" }}
-                  page
+                page
                 {{ else }}
-                  {{ _template }}
+                {{ _template }}
                 {{ endif }}
                 - <a href="{{ url }}" title="Open '{{ title }}'">{{ url|truncate:50 }}</a>
-                </small>
-              </h4>
-              <div class="collapse" id="search-result-{{ count }}">
-                {{ if author || date || categories_list }}
-                <div class="media-metadata text-muted">
-                  <p>Posted
-                    {{ if author|not_empty }}
-                    {{ member:profile member="{author}" }}
-                    by <span class="article__author">
-                    {{ if author_url }}<a href="{{ author_url }}">{{ endif }}
-                    {{ first_name }} {{ last_name }}
-                    {{ if author_url }}</a>{{ endif }}
-                    </span>
-                    {{ /member:profile }}
-                    {{ endif }}
-                    {{ if date }}
-                    on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
-                    {{ endif }}
-                    {{ if categories_list }}
-                    in <span class="article__category">{{ categories_list|title }}</span>
-                    {{ endif }}
-                  </p>
-                </div><!-- END .article__meta -->
-                {{ endif }}
-                <div class="media-summary">
-                  {{ if summary }}
-                  {{ summary|smartypants|markdown|striptags }}
-                  {{ else }}
-                  {{ content|striptags|smartypants|markdown|striptags|truncate:200 }}
+              </small>
+            </h4>
+          </header><!-- END .panel-heading -->
+          <div class="collapse" id="search-result-{{ count }}">
+            <div class="panel-body media">
+              {{ if main_img|not_empty }}
+              <a class="pull-left" href="{{ url }}">
+                <img class="media-object img-thumbnail" src="{{ transform src="{ main_img }" width="96" height="96" action="smart" }}" alt="main image for {{ title }}">
+              </a>
+              {{ endif }}
+              {{ if author || date || categories_list }}
+              <div class="media-metadata text-muted">
+                <p>{{ if featured=="is_featured" }}Featured post{{ else }}Posted{{ endif }}
+                  {{ if author|not_empty }}
+                  {{ member:profile member="{author}" }}
+                  by <span class="article__author">
+                  {{ if author_url }}<a href="{{ author_url }}">{{ endif }}
+                  {{ first_name }} {{ last_name }}
+                  {{ if author_url }}</a>{{ endif }}
+                  </span>
+                  {{ /member:profile }}
                   {{ endif }}
-                </div>
+                  {{ if date }}
+                  on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+                  {{ endif }}
+                  {{ if categories_list }}
+                  in <span class="article__category">{{ categories_url_list|title }}</span>
+                  {{ endif }}
+                </p>
+              </div><!-- END .article__meta -->
+              {{ endif }}
+              <div class="media-summary">
+                {{ if summary }}
+                {{ summary|smartypants|markdown }}
+                {{ else }}
+                {{ content|striptags|truncate:250 }}
+                {{ endif }}
               </div>
-            </article>
-          </div>
-        </li>
+            </div><!-- END .panel-body .media -->
+          </div><!-- END .collapse -->
+        </article>
     {{ if last }}
-      </ul>
+      </div>
     {{ endif }}
   {{ endif }}
 {{ /bloodhound:search }}

@@ -49,3 +49,114 @@ $('input[pattern]').bind('focusout', function(c) {
   $(this).parents('.form-group').removeClass('has-error');
 });
 
+// Convert images with a title to figures with floating text
+// Only in the main body of a single article though!
+$(function() {
+  $('.article-single .content-main img[title]').each(function() {
+    $(this).wrap('<figure></figure>');
+    $(this).after('<figcaption>' + $(this).attr('title') + '</figcaption>');
+    $(this).removeAttr('title');
+    $(this).addClass('figure');
+  })
+  $('.article-single .content-main img:not(.figure), .article-single .content-main figure:not(img)').each(function(index) {
+    $(this).addClass(index % 2 ? 'img-right' : 'img-left');
+  })
+});
+
+// Fade in/out alert-fixed-top using bootstrap's fade and fade.in classes
+// Stays on screen for at least 10 seconds and at least 3 seconds after mouseover
+$(document).ready(function() {
+  showAlertFixedTop()
+});
+
+function showAlertFixedTop() {
+  var timeFadeIn = 500;
+  var timeFadeOut = 10000;
+  var timeFadeOutHover = 3000;
+  var alertTimer;
+  if ($('.alert-fixed-top.fade').length) {
+    setTimeout("$('.alert-fixed-top.fade').addClass('in')", timeFadeIn);
+    setTimeout(function() { alertFadeOut(false) }, (timeFadeIn + timeFadeOut - timeFadeOutHover) );
+  }
+  function alertFadeOut(minTime) {
+    if ($('.alert-fixed-top.fade').length) {
+      if (minTime) {
+        //check for :hover in case mouseover happens before the second timer
+        if (!$('.alert-fixed-top.fade').is(':hover')) {
+          $('.alert-fixed-top.fade').alert('close');
+        }
+      } else {
+        $('.alert-fixed-top.fade').mouseout(function () {
+          alertTimer = setTimeout(function() { alertFadeOut(true) }, timeFadeOutHover);
+        });
+        $('.alert-fixed-top.fade').mouseover(function () {
+          clearTimeout(alertTimer);
+        });
+        alertTimer = setTimeout(function() { alertFadeOut(true) }, timeFadeOutHover);
+      }
+    }
+  }
+}
+
+
+// Cookie notification
+$(document).ready(function() {
+  var permitcookiePartialName = '_modalcookies';
+  var permitcookieName = '_permitcookies';
+  var permitcookieExpiryDays = 7;
+  var dt = new Date();
+  var permitcookieDataString = vernamcypher($(location).attr('hostname'), hexit('t=' + dt.valueOf() + '; l=' + $(location).attr('href')) );
+  var crumbs = new Array();
+  var crumbdata = $.cookie(permitcookieName);
+  if (!crumbdata) {
+    $('body').append('<div id="cookiealert"></div>');
+    var scriptpath = $("script[src]").last().attr("src").split('?')[0].split('/').slice(0, -1).join('/')+'/';
+    $('#cookiealert').load(scriptpath+'../partials/'+permitcookiePartialName+'.html', function( response, status, xhr ) {
+        if ( status == "error" ) {
+          var msg = "Sorry but there was an error: ";
+          $( "#cookieinsert" ).html( msg + xhr.status + " " + xhr.statusText );
+        } else {
+          showAlertFixedTop()
+        }
+    });
+    $.cookie(permitcookieName, permitcookieDataString, { expires: permitcookieExpiryDays, path: '/' });
+  } else {
+    crumbdata = unhexit(vernamcypher($(location).attr('hostname'),crumbdata));
+    crumbdata = crumbdata.replace(/[\s]*\;[\s]*/g,';');
+    crumbdata = crumbdata.replace(/[\s]*\=[\s]*/g,'=');
+    var splitcookie = crumbdata.split(';');
+    for (var i=0; i<splitcookie.length; i++) {
+      crumbs[ splitcookie[i].split('=')[0] ] = splitcookie[i].split('=')[1]
+    }
+    var d = new Date(Number(crumbs['t']));
+    //alert('found cookie!\ntimestamp: ' + d + '\nlocation: ' + crumbs['l'] + '\n\ncrumbdata: ' + crumbdata);
+  }
+  
+  function vernamcypher(key, value) {
+    var newkey = '';
+    var result = '';
+    for(var i=0; i<key.length; i++) {
+      newkey+=key.charCodeAt(i)
+    }
+    for(var i=0; i<value.length; i++) {
+      result+=String.fromCharCode(newkey[i % newkey.length]^value.charCodeAt(i));
+    }
+    return result;
+  }
+  function hexit(input) {
+    var output = '';
+    for (var i = 0; i < input.length; i++) {
+      output += (input.charCodeAt(i) + 0x100).toString(16).slice(1);
+    }
+    return output;
+  }
+  function unhexit(input) {
+    var output = '';
+    for (var i = 0; i < input.length; i += 2) {
+      output += String.fromCharCode('0x'+input[i]+input[i+1]);
+    }
+    return output;
+  }
+
+});
+

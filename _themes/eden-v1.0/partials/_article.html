@@ -1,60 +1,52 @@
-<article class="article article-single">
-  <header>
+<article class="panel article-single">
+  <header class="panel-heading">
     {{ if alt_title }}
-    <h2 class="article__heading">{{ alt_title }}</h2>
+    <h2 class="article-heading">{{ alt_title }}</h2>
     {{ else }}
-    <h2 class="article__heading">{{ title }}</h2>
-    {{ endif }}
-    
-    {{ if author || date || categories_list || tags_list }}
-    <div class="article__meta">
-
-      {{ if author|not_empty }}
-      {{ member:profile member="{author}" }}
-      <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p>
-      {{ /member:profile }}
-      {{ endif }}
-
-      {{ if date }}
-      <p class="article__date">Posted on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
-      {{ endif }}
-      
-      {{ if categories_list && tags_list }}
-      <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
-      {{ endif }}
-
-      {{ if categories_list && !tags_list }}
-      <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
-      {{ endif }}
-
-      {{ if !categories_list && tags_list }}
-      <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
-      {{ endif }}
-
-    </div><!-- END .article__meta -->
+    <h2 class="article-heading">{{ title }}</h2>
     {{ endif }}
   </header>
 
-  {{ if main_img|not_empty }}
-  <img src="{{ transform
-    src="{{ main_img }}"
-    width="650"
-    height="450"
-    action="smart"
-  }}" alt="" class="article__img">
-  {{ endif }}
+  <div class="panel-body media">
+    {{ if author || date || categories_list }}
+    <div class="text-muted">
+      <p>{{ if featured=="is_featured" }}Featured post{{ else }}Posted{{ endif }}
+         {{ if author|not_empty }}
+         {{ member:profile member="{author}" }}
+         by <span class="article__author">
+         {{ if author_url }}<a href="{{ author_url }}">{{ endif }}
+         {{ first_name }} {{ last_name }}
+         {{ if author_url }}</a>{{ endif }}
+         </span>
+         {{ /member:profile }}
+         {{ endif }}
+         {{ if date }}
+         on <span class="article__date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></span>
+         {{ endif }}
+         {{ if categories_list }}
+         in <span class="article__category">{{ categories_url_list|title }}</span>
+         {{ endif }}
+      </p>
+    </div><!-- END .article__meta -->
+    {{ endif }}
 
-  <div class="lead">
-  {{ summary|smartypants|markdown }}
-  </div><!-- END .lead -->
+    {{ if main_img|not_empty }}
+    <img class="img-main img-rounded" src="{{ main_img }}" alt="main image for {{ title }}" />
+    {{ endif }}
 
-  <div class="main-content">
-  {{ content }}
-  </div><!-- END .main-content -->
+    <div class="lead clearfix">
+    {{ summary|smartypants|markdown }}
+    </div><!-- END .lead -->
+
+    <div class="content-main">
+    {{ content }}
+    </div><!-- END .main-content -->
+  </div><!-- END .panel-body media --> 
   
-  <footer>
-    <a href="/">&larr; back</a>
-  </footer>
+  <footer class="panel-footer">
+    <div>footer</div>
+  </footer><!-- END .panel-footer -->
+
 </article>
 
 {{ if show_comments }}

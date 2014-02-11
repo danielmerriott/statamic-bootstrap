@@ -24,7 +24,7 @@
       <div class="col-sm-4">
         <h2>{{ title }}</h2>
         {{ if main_img|not_empty }}
-        <img src="{{ transform src="{{ main_img }}" width="180" height="120" action="smart" }}" alt="" class=" article__img">
+        <img src="{{ main_img }}"  alt="" class="img-responsive">
         {{ endif }}
         <p>{{ summary|smartypants|markdown }}</p>
         <p><a class="btn" href="{{ url }}">Read more &raquo;</a></p>
